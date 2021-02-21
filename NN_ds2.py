@@ -82,7 +82,7 @@ plt.legend()
 plt.show()
 #
 # Alpha VC
-opt_clf = MLPClassifier(activation='logistic', hidden_layer_sizes=[3,2], solver='lbfgs', random_state=random_seed)
+opt_clf = MLPClassifier(activation='logistic', hidden_layer_sizes=[40,60], solver='lbfgs', random_state=random_seed)
 
 param_range = np.linspace(0.01, 0.21, 20)
 train_scores, validation_scores = validation_curve(opt_clf, X_train, y_train, 'alpha', param_range, cv=10, n_jobs=-1)
